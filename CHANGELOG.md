@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/CoCreate-app/CoCreate-rqlite/compare/v1.1.0...v1.1.1) (2026-07-19)
+
+
+### Bug Fixes
+
+* set default branch to main ([04b7cd5](https://github.com/CoCreate-app/CoCreate-rqlite/commit/04b7cd520de3ffe4c68ffd8f89cff70a7e1a1682))
+
 # [1.1.0](https://github.com/CoCreate-app/CoCreate-rqlite/compare/v1.0.0...v1.1.0) (2026-07-19)
 
 
