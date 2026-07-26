@@ -16,17 +16,22 @@
  ********************************************************************************/
 
 /**
- * Universal router routing rqlite request methods safely.
- * Under the hood, rqlite query requests must be routed over its REST HTTP API
- * rather than standard in-process rqlite socket bindings.
+ * Universal router routing RQLite storage request methods safely.
+ *
+ * Under the hood, RQLite utilizes the LibSQL/SQLite engine dialect. Rather than
+ * re-implementing identical query handling logic, this wrapper delegates request
+ * execution directly to `@cocreate/sqlite`.
+ *
+ * All operations conform to CoCreate's unified, object-oriented JSON protocol
+ * (e.g., `object.create`, `object.read`, `object.update`, `object.delete`).
+ * This standardized protocol operates across all database drivers and third-party
+ * APIs, allowing seamless, parallel multi-database state routing across backends
+ * without exposing underlying engine-specific APIs to the application layer.
  */
-export const send = async (data) => {
-	// The rqlite wrapper handles mapping standard SQL execution blocks 
-	// into rqlite's HTTP API payload format: /db/execute or /db/query
-	console.log("[rqlite Wrapper] Routing request over HTTP REST Wire API...");
-	
-	// Temporary implementation fallback mapping rqlite's HTTP payload pipeline
-	return { status: true, message: "rqlite payload routed over HTTP wire protocol" };
+import sqlite from "@cocreate/sqlite";
+
+export const send = (data) => {
+	return sqlite.send(data);
 };
 
 export default { send };
