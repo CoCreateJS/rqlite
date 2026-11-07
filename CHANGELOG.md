@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/CoCreateJS/rqlite/compare/v2.0.1...v2.0.2) (2026-11-07)
+
+
+### Bug Fixes
+
+* bump CoCreate dependency versions ([e6e1df6](https://github.com/CoCreateJS/rqlite/commit/e6e1df6f4129325bd81c1b2e6ddfa7d50a68b992))
+
 ## [2.0.1](https://github.com/CoCreateJS/rqlite/compare/v2.0.0...v2.0.1) (2026-11-05)
 
 
